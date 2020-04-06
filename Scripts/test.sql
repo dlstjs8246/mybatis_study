@@ -15,4 +15,5 @@ select stud_id, name, email, dob, phone,
 desc students;
 insert into students(stud_id,name,email,phone,dob) values (3,'홍길동','dlstjs8246@naver.com','010-1111-1111','1990-09-03');
 select * from students;
-delete from students where stud_id =3;
+alter table students modify column gender tinyint(1) unsigned;
+select * from user_pics;

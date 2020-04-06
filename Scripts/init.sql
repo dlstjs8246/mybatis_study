@@ -202,6 +202,8 @@ ALTER TABLE `mybatis_study`.`course_enrollment`
 		REFERENCES `mybatis_study`.`courses` ( -- 과목
 			`course_id` -- 과목코드
 		);
+	
+
 drop user if exists 'user_mybatis_study'@'localhost';
 drop user if exists 'user_mybatis_study'@'%';
 

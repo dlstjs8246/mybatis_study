@@ -15,4 +15,7 @@ public interface StudentMapper {
 	List<Student> selectStudentByAllForResultMap();
 	List<Map<String,Object>> selectStudentByAllForHashMap();
 	Student selectStudentByNoAssociation(Student student);
+	int insertEnumStudent(Student student);
+	Student selectAllStudentByMap(Map<String,String> map);
+	Map<Integer,Student> selectStudentForMap(int studId);
 }

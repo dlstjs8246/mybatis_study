@@ -31,7 +31,7 @@ public class TutorMapperTest {
 		Tutor findTutor = new Tutor();
 		findTutor.setTutorId(1);
 		Tutor tutor = dao.selectTutorByTutorId(findTutor);
-		Assert.assertEquals(tutor.getTutorId(), tutor.getName());
+		Assert.assertEquals(tutor.getTutorId(), findTutor.getTutorId());
 		log.trace(tutor.getTutorId() + " : " + tutor.getName());
 		for(Course c : tutor.getCourses()) {
 			log.trace(c.toString());
