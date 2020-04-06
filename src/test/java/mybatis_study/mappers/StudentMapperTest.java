@@ -1,6 +1,7 @@
 package mybatis_study.mappers;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
@@ -8,12 +9,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import junit.framework.Assert;
 import mybatis_study.dto.Gender;
 import mybatis_study.dto.PhoneNumber;
 import mybatis_study.dto.Student;
@@ -166,5 +167,21 @@ public class StudentMapperTest extends AbstractTest {
 		for(Entry<Integer,Student> entry : map.entrySet()) {
 			System.out.printf("key(%s) - value(%s)%n",entry.getKey(),entry.getValue().toString());
 		}
+	}
+	@Test
+	public void test13updateSetStudent() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName()+ "()");
+		Student student = new Student();
+		student.setStudId(1);
+		student.setPhone(new PhoneNumber("987-654-3211"));
+		student.setDob(new Date());
+		
+		int res = dao.updateSetStudent(student);
+		Assert.assertSame(1, res);
+		
+		student.setPhone(new PhoneNumber("123-123-1234"));
+		student.setDob(new GregorianCalendar(1988,04,25).getTime());
+		res = dao.updateSetStudent(student);
+		Assert.assertSame(1, res);
 	}
 }

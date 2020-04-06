@@ -18,4 +18,5 @@ public interface StudentMapper {
 	int insertEnumStudent(Student student);
 	Student selectAllStudentByMap(Map<String,String> map);
 	Map<Integer,Student> selectStudentForMap(int studId);
+	int updateSetStudent(Student student);
 }

@@ -93,4 +93,9 @@ public class StudentMapperImpl implements StudentMapper {
 		sqlSession.select(namespace + ".selectStudentForMap",studId,resultHandler);
 		return map;
 	}
+
+	@Override
+	public int updateSetStudent(Student student) {
+		return sqlSession.update(namespace + ".updateSetStudent",student);
+	}
 }

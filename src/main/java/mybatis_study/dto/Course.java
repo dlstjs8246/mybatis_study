@@ -12,6 +12,18 @@ public class Course {
 	public int getCourseId() {
 		return courseId;
 	}
+	
+	
+	public Course(int courseId, String name, String description, Date startDate, Date endDate, int tutorId) {
+		this.courseId = courseId;
+		this.name = name;
+		this.description = description;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.tutorId = tutorId;
+	}
+
+
 	public void setCourseId(int courseId) {
 		this.courseId = courseId;
 	}

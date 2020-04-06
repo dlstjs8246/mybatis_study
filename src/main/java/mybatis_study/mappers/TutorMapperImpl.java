@@ -1,7 +1,11 @@
 package mybatis_study.mappers;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 
+import mybatis_study.dto.Course;
 import mybatis_study.dto.Tutor;
 import mybatis_study.jdbc.MyBatisSqlSessionFactory;
 

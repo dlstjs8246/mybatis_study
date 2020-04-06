@@ -1,7 +1,5 @@
 package mybatis_study.mappers;
 
-import static org.junit.Assert.*;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
